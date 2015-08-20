@@ -9,8 +9,8 @@ from email.mime.multipart import MIMEMultipart
 
 def sendMeAnEmailIfSpotOpensUp():
 
-	fromaddr = "INSERT YOUR EMAIL ADDRESS"
-	toaddr = "INSERT EMAIL ADDRESS TO SEND TO"
+	fromaddr = "YOUR EMAIL"
+	toaddr = "INSERT EMAIL"
 	msg = MIMEMultipart()
 	msg['From'] = fromaddr
 	msg['To'] = toaddr
@@ -23,7 +23,7 @@ def sendMeAnEmailIfSpotOpensUp():
 
 	server = smtplib.SMTP('smtp.gmail.com', 587)
 	server.starttls()
-	server.login(fromaddr, "YOUR PASSWORD")
+	server.login(fromaddr, "YOUR PASSWORD)
 	text = msg.as_string()
 	server.sendmail(fromaddr, toaddr, text)
 	server.quit()
@@ -56,4 +56,3 @@ def searchDoctor():
 	else: print("No open spots")
 	
 searchDoctor()
-
